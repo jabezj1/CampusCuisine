@@ -49,8 +49,8 @@ Allows target users (students) to select and purchase food and drinks from estab
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/wireframe.png" width=600>
+
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/wireframe.png" width=>
 <img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/starting%20page.png" width=600>
 <img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/log%20in%20page.png" width=600>
 <img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/sign%20up%20page.png" width=600>
