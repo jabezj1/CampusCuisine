@@ -45,7 +45,16 @@ Allows target users (students) to select and purchase food and drinks from estab
 * *BreakMaker* users will have access to a fourth page called **The Bakery** page, where they can see available orders that need to be picked up, examine order receipts, and have access to an embedded Google Maps interface.
 * *Breadmaker* users will have access to a fifth page called **Profile** page, where they can access account details, see total money earned, and access a history of orders they delivered. There will be a button to revert the app back into the standard user mode.
 
+## Navigation
 
+
+## Wireframes
+[Add picture of your hand sketched wireframes in this section]
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
 
 
 
