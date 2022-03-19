@@ -47,19 +47,19 @@ Allows target users (students) to select and purchase food and drinks from estab
 
 ## Navigation
 
-Tab Navigation (Tab to Screen)
+**Tab Navigation (Tab to Screen)**
 * Order
 * Cart 
-* (Breadmaker Add-on) Jobs 
+* *(Breadmaker Add-on)* Jobs 
 * Profile
 
 
-Flow Navigation (Screen to Screen)
+**Flow Navigation (Screen to Screen)**
 * Log-in -> Login option is user account Exists
 * Sign-up -> Signup option to create a new user account
-* Breadmaker Sign-up (Or Queue if Optional) -> Automatically register user to become a Breadmaker
+* *Breadmaker* Sign-up (Optional) -> Automatically register user to become a Breadmaker
 * Order-> Choose a restaurant and pick from its menu to order food 
-* (Breadmaker Add-on) Jobs -> List of Orders Breadmakers can accept to deliver
+* *(Breadmaker Add-on)* Jobs -> List of Orders Breadmakers can accept to deliver
 * Cart-> Items chosen from orders that are ready to be checked out 
 * Profile -> User details about account and favorites.
 
