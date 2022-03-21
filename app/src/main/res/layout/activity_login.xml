@@ -8,10 +8,4 @@
     tools:context=".LoginActivity">
 
 
-<!--    <Button-->
-<!--        app:neuButtonType="elevated_soft"-->
-<!--        app:neuPlatformColor="@color/button_platform_color"-->
-<!--        tools:ignore="MissingClass,MissingConstraints" />-->
-<!--    ... />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
