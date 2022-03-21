@@ -44,3 +44,90 @@ Allows target users (students) to select and purchase food and drinks from estab
 * Third page known as **Profile** page, where users can see personal account details, payment methods, recent order history, *Favorites*, and a button to become a **BreadMaker**.
 * *BreakMaker* users will have access to a fourth page called **The Bakery** page, where they can see available orders that need to be picked up, examine order receipts, and have access to an embedded Google Maps interface.
 * *Breadmaker* users will have access to a fifth page called **Profile** page, where they can access account details, see total money earned, and access a history of orders they delivered. There will be a button to revert the app back into the standard user mode.
+
+## Navigation
+
+**Tab Navigation (Tab to Screen)**
+* Order
+* Cart 
+* *(Breadmaker Add-on)* Jobs 
+* Profile
+
+
+**Flow Navigation (Screen to Screen)**
+* Log-in -> Login option is user account Exists
+* Sign-up -> Signup option to create a new user account
+* *Breadmaker* Sign-up (Optional) -> Automatically register user to become a Breadmaker
+* Order-> Choose a restaurant and pick from its menu to order food 
+* *(Breadmaker Add-on)* Jobs -> List of Orders Breadmakers can accept to deliver
+* Cart-> Items chosen from orders that are ready to be checked out 
+* Profile -> User details about account and favorites.
+
+
+## Wireframes
+
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/wireframe.png" width=1000>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/starting%20page.png" width=600>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/log%20in%20page.png" width=600>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/sign%20up%20page.png" width=600>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/order%20page.png" width=600>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/my%20cart%20page.png" width=600>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/profile%20page.png" width=600>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/bakery%20page.png" width=600>
+<img src="https://github.com/jabezj1/CampusCuisine/blob/master/android-project/history%20page.png" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
+
+## Schema 
+
+### Models
+
+#### POST/GET UserTable
+
+| Property | Type | Description |
+| :---: | :---: |  :---: | 
+| UserId | *number*| unique id for each user to identify them |
+| Username | *string* | username used to logged |
+| Password | *string* | password for logging in |
+| Email    | *string* | users email to be used in profile sign up |
+| Breadmaker| *boolean* | determines if user is going to be delivering or not based off user input|
+
+#### POST/GET OrdersTable
+| Property | Type | Description |
+| :---: | :---: |  :---: | 
+| OrderId | *number* | unique id assigned to each order made |
+| CreatedAt | *datetime* |  date when user placed order |
+| UpdatedAt | *datetime* |  date when post is updated | 
+| OrderComplete | *boolean* | signifies which orders have not been completed that will apear for deliverers| 
+
+### Networking
+#### List of network requests by screen
+
+* SignUp Screen 
+  * (POST) Query to add user to database
+  
+* Login Screen
+  * (Read/GET) Query to call users information matches one in database
+  
+* Main Screen
+  * (Read/GET) Query to get food suggestions 
+  * (Read/GET) Query to get favorited food places 
+  * (Read/GET) Query to get locations near user 
+  
+* Cart/Order Screen
+  * (POST) Query to add food to an order to be sent to orders table
+  * (Read/GET) Query to get order status for users and bread makers
+  * (PUT) Quer to update order status when Breadmaker accepts job
+
+* Profile Screen
+  * (Read/GET) Query to get users account details
+  * (PUT) Query to update users account details
+  * (Read/GET) Query to get orders made by current user
+  * (Read/GET) Query to get favorited food places
+  * (PUT) Query to make user a breadmaker/deliverer
+
+* Breadmakers
+  * (Read/GET) Query to get all orders available
+  * (Read/GET) Query to get all orders taken history
