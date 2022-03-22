@@ -14,15 +14,15 @@
         android:layout_margin="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
+        android:drawableTint="#004aad"
         android:hint="First Name"
         android:padding="20dp"
         android:textColor="#004aad"
         android:textColorHint="#004aad"
-        android:drawableTint="#004aad"
         app:layout_constraintBottom_toTopOf="@+id/LastName"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="58dp" />
 
     <EditText
         android:id="@+id/LastName"
@@ -65,16 +65,16 @@
         android:layout_margin="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
+        android:drawableTint="#004aad"
         android:hint="Password"
         android:padding="20dp"
+        android:password="true"
         android:textColor="#004aad"
         android:textColorHint="#004aad"
-        android:drawableTint="#004aad"
-        android:password="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="0.59"
+        tools:layout_editor_absoluteX="10dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signbuptn"
@@ -97,6 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />

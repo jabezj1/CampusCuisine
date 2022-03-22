@@ -8,80 +8,64 @@
     android:clipChildren="false"
     tools:context=".LoginActivity">
 
-
-<!--    <Button-->
-<!--        app:neuButtonType="elevated_soft"-->
-<!--        app:neuPlatformColor="@color/button_platform_color"-->
-<!--        tools:ignore="MissingClass,MissingConstraints" />-->
-<!--    ... />-->
-
-    <TextView
-        android:id="@+id/SignIn_View"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:textColor="@color/black"
-        android:textSize="40dp"
-        android:layout_margin="60dp"
-        android:paddingTop="60dp"
-        android:gravity="center"
-        android:textStyle="bold"
-
-        />
-
     <EditText
         android:id="@+id/Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:layout_below="@id/SignIn_View"
-        android:layout_margin="10dp"
-        android:padding="20dp"
+        android:layout_above="@+id/Password"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-        android:drawableTint="#004aad"
         android:drawablePadding="20dp"
-        />
+        android:drawableTint="#004aad"
+        android:hint="Username"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
-        <EditText
-            android:id="@+id/Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:layout_below="@id/Username"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:background="#30ffffff"
-            android:drawableLeft="@drawable/ic_baseline_info_24"
-            android:drawableTint="#004aad"
-            android:drawablePadding="20dp"
-            />
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loginbtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="20dp"
+        android:drawableTint="#004aad"
+        android:hint="Password"
+        android:password="true"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/loginbtn"
-            android:layout_below="@id/Password"
-            android:text="LOGIN"
-            android:backgroundTint="#004aad"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
-            />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="279dp"
+        android:backgroundTint="#004aad"
+        android:text="LOGIN" />
 
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
-
-
-
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/white"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24" />
 
 </RelativeLayout>
