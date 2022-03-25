@@ -63,6 +63,15 @@ Allows target users (students) to select and purchase food and drinks from estab
 * Cart-> Items chosen from orders that are ready to be checked out 
 * Profile -> User details about account and favorites.
 
+## Video Walkthrough
+
+Here's a walkthrough of our First Milestone
+
+<img src=CCmilestone1.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
 
 ## Wireframes
 
