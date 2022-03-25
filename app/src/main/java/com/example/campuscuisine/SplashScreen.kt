@@ -5,6 +5,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.parcelize.Parcelize
+import com.parse.ParseUser
+
+
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {
@@ -22,9 +26,23 @@ class SplashScreen : AppCompatActivity() {
         // we used the postDelayed(Runnable, time) method
         // to send a message with a delayed time.
         Handler().postDelayed({
-            val intent = Intent(this, IntroActivity::class.java)
-            startActivity(intent)
-            finish()
+            if (ParseUser.getCurrentUser() != null){
+                goToMainActivity()
+            }
+            else {
+                val intent = Intent(this, IntroActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }, 3000) // 3000 is the delayed time in milliseconds.
     }
+
+
+    private fun goToMainActivity(){
+        val intent = Intent(this, MainActivity:: class.java)
+        startActivity(intent)
+        finish()
+
+    }
+
 }

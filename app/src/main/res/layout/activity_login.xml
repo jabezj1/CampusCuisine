@@ -16,7 +16,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
+        android:background="#d9d9d9"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
         android:drawablePadding="20dp"
         android:drawableTint="#004aad"
@@ -29,11 +29,11 @@
         android:id="@+id/Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/loginbtn"
+        android:layout_above="@+id/Login"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
+        android:background="#d9d9d9"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
         android:drawableTint="#004aad"
@@ -43,8 +43,8 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginbtn"
+    <Button
+        android:id="@+id/Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
