@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="#f8b30d">
+
+
+    <item
+        android:id="@+id/Order"
+        android:icon="@drawable/ic_dinner_plate"
+        android:title="Order"
+        app:cnb_iconColor="#f8b30d"
+
+        />
+
+    <item
+        android:id="@+id/Checkout"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="Checkout"
+        app:cnb_iconColor="#f8b30d"
+
+        />
+
+    <item
+        android:id="@+id/Profile"
+        android:icon="@drawable/ic_chef_hat"
+        android:title="Profile"
+        app:cnb_iconColor="#f8b30d"
+        />
+
+    <item
+        android:id="@+id/BreadMaker"
+        android:icon="@drawable/ic_money_sign"
+        android:title="BreadMaker"
+        app:cnb_iconColor="#f8b30d"
+
+
+
+
+        />
+
+
+
+
+
+
+</menu>
