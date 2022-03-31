@@ -10,32 +10,24 @@ import android.view.ViewGroup
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.location.Location
-import android.os.Looper
-import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.FrameLayout
-import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import com.example.campuscuisine.Common.Common
+import com.example.campuscuisine.Model.ClosePlaces
+import com.example.campuscuisine.Remote.IGoogleAPIService
 import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationCallback
-import com.google.android.gms.location.LocationResult
-import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
-
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.lang.StringBuilder
 
 
 class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
@@ -44,8 +36,11 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
     private lateinit var mLastLocation: Location
     lateinit var fusedLocationClient: FusedLocationProviderClient
 
+    lateinit var googleServices: IGoogleAPIService
+    var UserLat: Double = 0.0
+    var UserLng: Double= 0.0
 
-
+    internal lateinit var  currentPlace: ClosePlaces
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,6 +53,9 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
         super.onViewCreated(view, savedInstanceState)
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        //init service below
+        googleServices = Common.googleApiService
 
         fusedLocationClient = context?.let { LocationServices.getFusedLocationProviderClient(it) }!!
     }
@@ -83,6 +81,14 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
             if(location != null){
                 mLastLocation = location
                 val currentLatLong = LatLng(location.latitude, location.longitude)
+                UserLat = location.latitude
+                UserLng = location.longitude
+                nearByPlace("cafe")
+                nearByPlace("restaurant")
+                nearByPlace("meal_takeaway")
+                nearByPlace("meal_delivery")
+                nearByPlace("bakery")
+
                 //placeMarkerOnMap(currentLatLong)
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,17.5f))
             }
@@ -90,6 +96,47 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
     }
 
     override fun onMarkerClick(p0: Marker): Boolean = false
+
+    private fun nearByPlace(typePlace:String){
+        mMap.clear()
+        val url = findLocations(UserLat,UserLng, typePlace)
+
+        googleServices.getNearByPlaces(url)
+            .enqueue(object: Callback<ClosePlaces> {
+                override fun onResponse(call: Call<ClosePlaces>, response: Response<ClosePlaces>) {
+                    currentPlace = response.body()!!
+                    if(response!!.isSuccessful){
+                        for(i in 0 until response!!.body()!!.results!!.size){
+                            val markerOptions = MarkerOptions()
+                            val googlePlace = response.body()!!.results!![i]
+                            val lat = googlePlace.geometry!!.location!!.lat
+                            val lng = googlePlace.geometry!!.location!!.lng
+                            val placeName =googlePlace.name
+                            val latLng = LatLng(lat,lng)
+
+                            markerOptions.position(latLng)
+                            markerOptions.title(placeName)
+
+                            mMap!!.addMarker(markerOptions)
+
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<ClosePlaces>, t: Throwable) {
+                    Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+                }
+
+            })
+    }
+
+    private fun findLocations(userLat: Double, userLng: Double, typePlace: String): String {
+        val googlePlaceUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json")
+        googlePlaceUrl.append("?location=$userLat,$userLng&radius=6050")
+        googlePlaceUrl.append("&type=$typePlace")
+        googlePlaceUrl.append("&key=AIzaSyBOIRy3OubZdCBf80bCSF3g-yAB7WpiOSE")
+        return googlePlaceUrl.toString()
+    }
 
     companion object{
         private const val PERMISSION_CODE = 1
