@@ -134,7 +134,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
         val googlePlaceUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json")
         googlePlaceUrl.append("?location=$userLat,$userLng&radius=6050")
         googlePlaceUrl.append("&type=$typePlace")
-        googlePlaceUrl.append("&key=AIzaSyBOIRy3OubZdCBf80bCSF3g-yAB7WpiOSE")
+        googlePlaceUrl.append("&key=")
         return googlePlaceUrl.toString()
     }
 
