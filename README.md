@@ -23,9 +23,9 @@ Allows target users (students) to select and purchase food and drinks from estab
 
 **Required Must-have Stories**
 
-* Users can create an account.
-* Users can log into their account. There will be an option for standard login and another for *BreadMaker* login.
-* Users can create an order.
+- [x] Users can create an account.
+- [x] Users can log into their account. 
+- [x] User can be directed to main activity after logging in. 
 * Users can check over the items in their cart and confirm their order.
 * Users can see a profile page with personal information relevant to the app.
 * Users can sign up to become a *BreadMaker*.
