@@ -83,12 +83,12 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                 val currentLatLong = LatLng(location.latitude, location.longitude)
                 UserLat = location.latitude
                 UserLng = location.longitude
-                nearByPlace("cafe")
+
                 nearByPlace("restaurant")
                 nearByPlace("meal_takeaway")
                 nearByPlace("meal_delivery")
                 nearByPlace("bakery")
-
+                nearByPlace("cafe")
                 //placeMarkerOnMap(currentLatLong)
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,17.5f))
             }
