@@ -13,14 +13,14 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar
 class MainActivity : AppCompatActivity() {
 
 //    private lateinit var bottomNavView: BottomNavigationView
-    val fragment = CheckoutFragment()
+    val fragment = MapsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         openDefaultFragment()
-        var BottomNavBars = findViewById<ChipNavigationBar>(R.id.BottomNavBar)
+        val BottomNavBars = findViewById<ChipNavigationBar>(R.id.BottomNavBar)
         BottomNavBars.setItemSelected(R.id.Order)
         BottomNavBars.setOnItemSelectedListener{ it ->
             when(it){
@@ -33,7 +33,16 @@ class MainActivity : AppCompatActivity() {
                     val checkoutFragment = CheckoutFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.frameLayout,checkoutFragment).commit()
-
+                }
+                R.id.Profile -> {
+                    val profileFragment = ProfileFragment()
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout,profileFragment).commit()
+                }
+                R.id.BreadMaker-> {
+                    val breadmakerFragment = BreadMakerFragment()
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout,breadmakerFragment).commit()
                 }
             }
         }
