@@ -31,5 +31,4 @@ class IntroActivity : AppCompatActivity() {
     }
 
 
-
 }
