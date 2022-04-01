@@ -10,10 +10,12 @@ import android.view.ViewGroup
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.fragment.app.FragmentManager
 import com.example.campuscuisine.Common.Common
 import com.example.campuscuisine.Model.ClosePlaces
 import com.example.campuscuisine.Remote.IGoogleAPIService
@@ -66,6 +68,14 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
         mMap.uiSettings.isZoomControlsEnabled = true
         mMap.setOnMarkerClickListener(this)
         setUpMap()
+
+        mMap.setOnMarkerClickListener { marker ->
+            Common.selectedRestaurant = currentPlace.results!![Integer.parseInt(marker.snippet.toString())]
+
+            val fragmentManager: FragmentManager = parentFragmentManager
+            fragmentManager.beginTransaction().replace(R.id.map, PlaceDetailsFragment()).commit()
+            true
+        }
     }
 
     @SuppressLint("MissingPermission")
@@ -84,13 +94,13 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                 UserLat = location.latitude
                 UserLng = location.longitude
 
-                nearByPlace("restaurant")
+//                nearByPlace("restaurant")
                 nearByPlace("meal_takeaway")
-                nearByPlace("meal_delivery")
-                nearByPlace("bakery")
-                nearByPlace("cafe")
+                //nearByPlace("meal_delivery")
+//                nearByPlace("bakery")
+//                nearByPlace("cafe")
                 //placeMarkerOnMap(currentLatLong)
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,17.5f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong,15.5f))
             }
         }
     }
@@ -105,8 +115,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
             .enqueue(object: Callback<ClosePlaces> {
                 override fun onResponse(call: Call<ClosePlaces>, response: Response<ClosePlaces>) {
                     currentPlace = response.body()!!
-                    if(response!!.isSuccessful){
-                        for(i in 0 until response!!.body()!!.results!!.size){
+                    if(response.isSuccessful){
+                        for(i in 0 until response.body()!!.results!!.size){
                             val markerOptions = MarkerOptions()
                             val googlePlace = response.body()!!.results!![i]
                             val lat = googlePlace.geometry!!.location!!.lat
@@ -116,8 +126,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
 
                             markerOptions.position(latLng)
                             markerOptions.title(placeName)
-
-                            mMap!!.addMarker(markerOptions)
+                            markerOptions.snippet(i.toString())
+                            mMap.addMarker(markerOptions)
 
                         }
                     }
@@ -134,7 +144,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
         val googlePlaceUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json")
         googlePlaceUrl.append("?location=$userLat,$userLng&radius=6050")
         googlePlaceUrl.append("&type=$typePlace")
-        googlePlaceUrl.append("&key=")
+        googlePlaceUrl.append("&key=AIzaSyCCvUQH5E9yM-wcB21I2K0RTsAcdQSfW-o")
         return googlePlaceUrl.toString()
     }
 
