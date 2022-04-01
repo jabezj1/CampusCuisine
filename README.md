@@ -28,9 +28,10 @@ Allows target users (students) to select and purchase food and drinks from estab
 - [x] User can be directed to main activity after logging in.
 
 WEEK 4/1/22
-- [x] Main landing page known as **Order** page, where all users can browse restauraunts 
+- [x] Main landing page known as **Order** page, where all users can browse restaurants. 
 - [x] Find nearby establishments using an embedded Google Maps interface with Google Places, and start an order.
-- [x] Navigation switches to each fragment
+- [x] Navigation switches to each fragment.
+
 * Users can check over the items in their cart and confirm their order.
 * Users can see a profile page with personal information relevant to the app.
 * Users can sign up to become a *BreadMaker*.
