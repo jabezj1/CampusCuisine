@@ -92,7 +92,7 @@ class PlaceDetailsFragment : Fragment() {
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/photo")
         restaurantUrl.append("?maxwidth=$photo_width")
         restaurantUrl.append("&photoreference=$photo_reference")
-        restaurantUrl.append("&key=AIzaSyCCvUQH5E9yM-wcB21I2K0RTsAcdQSfW-o")
+        restaurantUrl.append("&key=")
         return restaurantUrl.toString()
     }
 
