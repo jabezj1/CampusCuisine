@@ -99,7 +99,7 @@ class PlaceDetailsFragment : Fragment() {
     private fun getPlaceDetailUrl(place_id: String): String {
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/details/json")
         restaurantUrl.append("?place_id=$place_id")
-        restaurantUrl.append("&key=AIzaSyCCvUQH5E9yM-wcB21I2K0RTsAcdQSfW-o")
+        restaurantUrl.append("&key=")
         return restaurantUrl.toString()
 
     }
