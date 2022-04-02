@@ -1,4 +1,4 @@
-package com.example.campuscuisine.Model
+package com.example.campuscuisine.MapsPlacesAPI
 
 class Location {
     var lat:Double=0.0

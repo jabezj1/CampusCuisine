@@ -1,4 +1,4 @@
-package com.example.campuscuisine.Remote
+package com.example.campuscuisine.MapsPlacesAPI
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -7,9 +7,9 @@ object RetrofitClient {
     private  var retrofit: Retrofit?=null
 
     fun getClient(baseUrl:String): Retrofit{
-        if (retrofit==null)
+        if (retrofit ==null)
         {
-            retrofit= Retrofit.Builder()
+            retrofit = Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

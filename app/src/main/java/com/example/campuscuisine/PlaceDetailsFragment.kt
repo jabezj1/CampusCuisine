@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.fragment.app.FragmentManager
-import com.example.campuscuisine.Common.Common
-import com.example.campuscuisine.Model.PlaceDetail
-import com.example.campuscuisine.Remote.IGoogleAPIService
+import com.example.campuscuisine.MapsPlacesAPI.Common
+import com.example.campuscuisine.MapsPlacesAPI.PlaceDetail
+import com.example.campuscuisine.MapsPlacesAPI.IGoogleAPIService
 import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Response
@@ -90,16 +89,14 @@ class PlaceDetailsFragment : Fragment() {
     private fun getRestaurantPhoto(photo_reference: String, photo_width: Int): String {
 
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/photo")
-        restaurantUrl.append("?maxwidth=$photo_width")
-        restaurantUrl.append("&photoreference=$photo_reference")
-        restaurantUrl.append("&key=")
+        restaurantUrl.append("?maxwidth=$photo_width&photoreference=$photo_reference&key=")
+
         return restaurantUrl.toString()
     }
 
     private fun getPlaceDetailUrl(place_id: String): String {
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/details/json")
-        restaurantUrl.append("?place_id=$place_id")
-        restaurantUrl.append("&key=")
+        restaurantUrl.append("?place_id=$place_id&key=")
         return restaurantUrl.toString()
 
     }

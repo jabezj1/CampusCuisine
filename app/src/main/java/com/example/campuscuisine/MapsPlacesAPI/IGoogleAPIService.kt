@@ -1,7 +1,7 @@
-package com.example.campuscuisine.Remote
+package com.example.campuscuisine.MapsPlacesAPI
 
-import com.example.campuscuisine.Model.ClosePlaces
-import com.example.campuscuisine.Model.PlaceDetail
+import com.example.campuscuisine.MapsPlacesAPI.ClosePlaces
+import com.example.campuscuisine.MapsPlacesAPI.PlaceDetail
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Url
