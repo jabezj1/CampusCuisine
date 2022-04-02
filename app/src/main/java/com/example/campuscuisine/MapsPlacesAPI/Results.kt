@@ -1,10 +1,8 @@
-package com.example.campuscuisine.Model
-
-import android.widget.DatePicker
+package com.example.campuscuisine.MapsPlacesAPI
 
 class Results {
     var name:String? = null
-    var geometry:Geometry? = null
+    var geometry: Geometry? = null
 
     var photos:Array<Photos>? = null
     var id:String?= null

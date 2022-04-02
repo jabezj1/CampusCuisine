@@ -1,4 +1,4 @@
-package com.example.campuscuisine.Model
+package com.example.campuscuisine.MapsPlacesAPI
 
 class Open {
     var day:Int = 0
