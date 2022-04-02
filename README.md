@@ -25,7 +25,13 @@ Allows target users (students) to select and purchase food and drinks from estab
 
 - [x] Users can create an account.
 - [x] Users can log into their account. 
-- [x] User can be directed to main activity after logging in. 
+- [x] User can be directed to main activity after logging in.
+
+WEEK 4/1/22
+- [x] Main landing page known as **Order** page, where all users can browse restaurants. 
+- [x] Find nearby establishments using an embedded Google Maps interface with Google Places, and start an order.
+- [x] Navigation switches to each fragment.
+
 * Users can check over the items in their cart and confirm their order.
 * Users can see a profile page with personal information relevant to the app.
 * Users can sign up to become a *BreadMaker*.
@@ -69,6 +75,8 @@ Allows target users (students) to select and purchase food and drinks from estab
 Here's a walkthrough of our First Milestone
 
 <img src=CCmilestone1.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src=CCmilestone2.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
