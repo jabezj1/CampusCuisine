@@ -1,4 +1,4 @@
-package com.example.campuscuisine.Model
+package com.example.campuscuisine.MapsPlacesAPI
 
 class Photos {
     var height: Int = 0
