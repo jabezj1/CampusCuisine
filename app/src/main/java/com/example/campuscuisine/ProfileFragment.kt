@@ -42,7 +42,7 @@ class ProfileFragment : Fragment() {
             ParseUser.logOut()
             val currentUser = ParseUser.getCurrentUser()
             Log.i(TAG,"user logged out")
-            val intent = Intent(context, LoginActivity::class.java)
+            val intent = Intent(context, IntroActivity::class.java)
             startActivity(intent)
         }
 
