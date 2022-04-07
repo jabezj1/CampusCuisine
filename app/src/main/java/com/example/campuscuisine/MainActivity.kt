@@ -64,13 +64,6 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-     fun LogOut(){
-         ParseUser.logOut()
-         val currentUser = ParseUser.getCurrentUser()
-         Log.i(ProfileFragment.TAG,"user logged out")
-         val intent = Intent(this@MainActivity, LoginActivity::class.java)
-         startActivity(intent)
-     }
 
 
 //        setContentView(R.layout.activity_main)
