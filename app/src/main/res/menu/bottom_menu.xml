@@ -9,8 +9,8 @@
         android:icon="@drawable/ic_dinner_plate"
         android:title="Order"
         app:cnb_iconColor="#f8b30d"
-
-        />
+        app:showAsAction="always"
+    />
 
     <item
         android:id="@+id/Checkout"
@@ -32,7 +32,6 @@
         android:icon="@drawable/ic_money_sign"
         android:title="BreadMaker"
         app:cnb_iconColor="#f8b30d"
-
 
 
 

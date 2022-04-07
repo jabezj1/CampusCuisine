@@ -1,38 +1,31 @@
 package com.example.campuscuisine
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Window
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.campuscuisine.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ismaeldivita.chipnavigation.ChipNavigationBar
-import com.parse.ParseUser
 
 class MainActivity : AppCompatActivity() {
 
-    //    private lateinit var bottomNavView: BottomNavigationView
-    val fragment = OrderFragment()
+//    private lateinit var bottomNavView: BottomNavigationView
+    val fragment = MapsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
+
         openDefaultFragment()
         val BottomNavBars = findViewById<ChipNavigationBar>(R.id.BottomNavBar)
         BottomNavBars.setItemSelected(R.id.Order)
         BottomNavBars.setOnItemSelectedListener{ it ->
             when(it){
                 R.id.Order -> {
-                    val mapsFragment = OrderFragment()
+                    val mapsFragment = MapsFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.frameLayout,mapsFragment).commit()
                 }
@@ -56,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    }
+        }
 
     private fun openDefaultFragment() {
         val transaction = supportFragmentManager.beginTransaction()
@@ -65,14 +58,13 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
 //        setContentView(R.layout.activity_main)
 
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 //        setContentView(binding.root)
 
-    //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-    //setUpTabBar()
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        //setUpTabBar()
 
 
 //    private fun setUpTabBar(){

@@ -17,7 +17,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <!-- layout.xml -->
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
         android:id="@+id/BottomNavBar"
@@ -38,7 +37,6 @@
         app:cnb_menuResource="@menu/bottom_menu"
         app:cnb_unselectedColor="#7393B3"
         app:layout_constraintBottom_toBottomOf="parent"
-
 
         />
 
