@@ -11,6 +11,8 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import com.parse.ParseObject
+import com.parse.ParseQuery
 import com.parse.ParseUser
 
 
@@ -31,21 +33,43 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         LogoutButton = view.findViewById(R.id.btnLogout)
         UserId = view.findViewById(R.id.tvUser)
+        BreadMakerButton = view.findViewById(R.id.btnBreadMaker)
 
-        val getCurrentUser = ParseUser.getCurrentUser().get("username")
-        UserId.text = getCurrentUser.toString()
+        val getUser = ParseUser.getCurrentUser().get("username")
+        UserId.text = getUser.toString()
 
         LogoutButton.setOnClickListener{
             ParseUser.logOut()
             val currentUser = ParseUser.getCurrentUser()
-            Log.i(ProfileFragment.TAG,"user logged out")
+            Log.i(TAG,"user logged out")
             val intent = Intent(context, LoginActivity::class.java)
             startActivity(intent)
+        }
+
+        Log.i(TAG, ParseUser.getCurrentUser().get("Breadmaker").toString())
+
+        BreadMakerButton.setOnClickListener{
+          updateBreadmaker()
+
         }
 
 
     }
 
+    private  fun updateBreadmaker(){
+        if(ParseUser.getCurrentUser()!= null){
+               if (ParseUser.getCurrentUser().get("Breadmaker") == false) {
+                   ParseUser.getCurrentUser().put("Breadmaker", true)
+                   Log.i(TAG, ParseUser.getCurrentUser().get("Breadmaker").toString())
+                   Toast.makeText(context, "You Can Now Deliver to your Campus", Toast.LENGTH_SHORT)
+                       .show()
+               }
+
+            }
+            else{
+                Log.w(TAG,"User not found signedIn")
+           }
+    }
 
     companion object {
         const val TAG = "ProfileFragment"
