@@ -17,10 +17,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UserId"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -79,7 +81,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUser" />
 
     <TextView
         android:id="@+id/tvFavorites"
@@ -90,7 +92,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnFavorites"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUser" />
 
     <TextView
         android:id="@+id/tvBCBreadmaker"
