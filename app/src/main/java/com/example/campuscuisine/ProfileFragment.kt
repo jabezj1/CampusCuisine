@@ -49,27 +49,42 @@ class ProfileFragment : Fragment() {
         Log.i(TAG, ParseUser.getCurrentUser().get("Breadmaker").toString())
 
         BreadMakerButton.setOnClickListener{
-          updateBreadmaker()
+          //updateBreadmaker()
+            val user = ParseUser.getCurrentUser()
+            if (ParseUser.getCurrentUser().get("Breadmaker") == false) {
+                user.put("Breadmaker", true)
+                user.saveInBackground { e ->
+                    if (e == null) {
+                        Toast.makeText(
+                            context,
+                            "You Can Now Deliver to your Campus",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        Log.e(TAG, "user is a breadMaker")
+                    } else {
+                        Log.i(TAG, "cannot make breadmaker")
+                    }
+                }
+            }else{
+                user.put("Breadmaker", false)
+                user.saveInBackground { e ->
+                    if (e == null) {
+                        Toast.makeText(
+                            context,
+                            "You Can Only Order Now!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        Log.e(TAG, "user is NOT a breadMaker")
+                    }
+                }
 
+            }
         }
 
 
     }
 
-    private  fun updateBreadmaker(){
-        if(ParseUser.getCurrentUser()!= null){
-               if (ParseUser.getCurrentUser().get("Breadmaker") == false) {
-                   ParseUser.getCurrentUser().put("Breadmaker", true)
-                   Log.i(TAG, ParseUser.getCurrentUser().get("Breadmaker").toString())
-                   Toast.makeText(context, "You Can Now Deliver to your Campus", Toast.LENGTH_SHORT)
-                       .show()
-               }
 
-            }
-            else{
-                Log.w(TAG,"User not found signedIn")
-           }
-    }
 
     companion object {
         const val TAG = "ProfileFragment"
