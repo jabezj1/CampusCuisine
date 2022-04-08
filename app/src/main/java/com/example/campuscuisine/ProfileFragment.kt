@@ -74,7 +74,7 @@ class ProfileFragment : Fragment() {
                             "You Can Only Order Now!",
                             Toast.LENGTH_SHORT
                         ).show()
-                        Log.e(TAG, "user is NOT a breadMaker")
+                        Log.e(TAG, "user is NOT a BreadMaker")
                     }
                 }
 
