@@ -7,22 +7,6 @@
     android:background="@drawable/ccsignup"
     tools:context=".SignupActivity">
 
-    <EditText
-        android:id="@+id/FullName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/UsernameSU"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="24dp"
-        android:background="#d9d9d9"
-        android:drawablePadding="20dp"
-        android:drawableTint="#004aad"
-        android:hint="Full Name"
-        android:padding="20dp"
-        android:textColor="#004aad"
-        android:textColorHint="#004aad"
-        app:layout_constraintBottom_toTopOf="@+id/UsernameSU"
-        tools:layout_editor_absoluteX="-152dp" />
 
     <EditText
         android:id="@+id/UsernameSU"
@@ -58,6 +42,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.53"
         tools:layout_editor_absoluteX="10dp" />
+
+
 
     <Button
         android:id="@+id/signupbtn"

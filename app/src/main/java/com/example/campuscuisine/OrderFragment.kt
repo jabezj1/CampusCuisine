@@ -7,16 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class OrderFragment : Fragment(R.layout.fragment_order) {
+class OrderFragment : Fragment() {
 
-
-
-
-
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        return inflater.inflate(R.layout.fragment_order, container, false)
-//    }
-}
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            return inflater.inflate(R.layout.fragment_order, container, false)
+        }
+    }
