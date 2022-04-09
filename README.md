@@ -32,9 +32,10 @@ WEEK 4/1/22
 - [x] Find nearby establishments using an embedded Google Maps interface with Google Places, and start an order.
 - [x] Navigation switches to each fragment.
 
-* Users can check over the items in their cart and confirm their order.
-* Users can see a profile page with personal information relevant to the app.
-* Users can sign up to become a *BreadMaker*.
+WEEK 4/8/22
+- [x] Users can check over the items in their cart and confirm their order.
+- [x] Users can see a profile page with personal information relevant to the app.
+- [x] Users can sign up to become a *BreadMaker*.
 * *BreakMaker* users will be able to access a list of available jobs for them to take.
 * *BreadMaker* users will be able to see the results of their work, such as money earned and previous job history.
 
@@ -77,6 +78,10 @@ Here's a walkthrough of our First Milestone
 <img src=CCmilestone1.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <img src=CCmilestone2.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src=CCmilestone3.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
