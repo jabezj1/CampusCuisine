@@ -1,0 +1,37 @@
+[
+  {
+  "type": "Restaurant Menu",
+  "id": "121721",
+  "name": "Jackson Hole",
+  "menuItems": [
+    {
+      "id": "94298",
+      "name": "Nachos",
+      "position": 1,
+      "description": "Warm corn tortilla chips topped with melted Cheddar and Pepper Jack cheese, chili, olives, sour cream, housemade salsa, housemade avocado salsa and garnished with cilantro.",
+      "price": "16.00"
+    },
+    {
+      "id": "94301",
+      "name": "Buffalo Wings",
+      "position": 2,
+      "description": "Smothered in House made Spicy sauce, carrots and celery sticks with Blue cheese dressing.",
+      "price": "14.50"
+    },
+    {
+      "id": "94304",
+      "name": "The Classic Burger",
+      "position": 3,
+      "description": "Bacon, American Cheese, JHB Sauce, Crispy Shoestring Onions Diced Pickle served with lettuce & tomato",
+      "price": "18.00"
+    },
+    {
+      "id": "94305",
+      "name": "Jackson Bison Burger",
+      "position": 3,
+      "description": "Pickled Cabbage, banana peppers, marmalade onion, pepper jack cheese, lettuce and tomato",
+      "price": "20.00"
+    }
+  ]
+  }
+]
