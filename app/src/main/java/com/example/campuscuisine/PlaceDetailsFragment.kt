@@ -1,6 +1,8 @@
 package com.example.campuscuisine
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -50,12 +52,13 @@ class PlaceDetailsFragment : Fragment() {
 
 
         closeWindow.setOnClickListener{
-            val fragmentManager: FragmentManager = childFragmentManager
+            val fragmentManager: FragmentManager = parentFragmentManager
 
             closeWindow.visibility = View.GONE
             orderButton.visibility = View.GONE
 
             fragmentManager.beginTransaction().replace(R.id.fragment_place_details, MapsFragment()).commit()
+
             //fragmentManager.beginTransaction().remove(this).commit()
 
             // "X" button functionality, closes restaurant view to see other places
@@ -73,8 +76,9 @@ class PlaceDetailsFragment : Fragment() {
             restaurantName.visibility = View.GONE
 
             //fragmentManager.popBackStackImmediate()
-            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, OrderFragment())
-
+            val intent = Intent(context, OrderActivity::class.java)
+            startActivity(intent)
+            Log.e("GOING", "going to order")
             // make invisible when clicked
             //orderButton.isGone
 

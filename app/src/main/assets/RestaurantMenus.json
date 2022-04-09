@@ -1,142 +1,37 @@
 [
   {
-    "type": "Restaurant Menu",
-    "id": "121721",
-    "name": "Jackson Hole",
-    "menuItems": [
-      {
-        "id": "94298",
-        "name": "Nachos",
-        "position": 1,
-        "description": "Warm corn tortilla chips topped with melted Cheddar and Pepper Jack cheese, chili, olives, sour cream, housemade salsa, housemade avocado salsa and garnished with cilantro.",
-        "price": "16.00"
-      },
-      {
-        "id": "94301",
-        "name": "Buffalo Wings",
-        "position": 2,
-        "description": "Smothered in House made Spicy sauce, carrots and celery sticks with Blue cheese dressing.",
-        "price": "14.50"
-      },
-      {
-        "id": "94304",
-        "name": "The Classic Burger",
-        "position": 3,
-        "description": "Bacon, American Cheese, JHB Sauce, Crispy Shoestring Onions Diced Pickle served with lettuce & tomato",
-        "price": "18.00"
-      },
-      {
-        "id": "94305",
-        "name": "Jackson Bison Burger",
-        "position": 3,
-        "description": "Pickled Cabbage, banana peppers, marmalade onion, pepper jack cheese, lettuce and tomato",
-        "price": "20.00"
-      }
-    ]
-  },
-  {
-    "type": "Restaurant Menu",
-    "id": "121732",
-    "name": "Hale and Hearty",
-    "menuItems": [
-      {
-        "id": "94289",
-        "name": "Classic Chicken Noodle",
-        "position": 1,
-        "description": "A childhood favorite, with chicken, tender egg noodles, and a rich homemade chicken broth.",
-        "price": "6.25"
-      },
-      {
-        "id": "94299",
-        "name": "Three Lentil Chili",
-        "position": 2,
-        "description": "A rich blend of red, green, and yellow lentils with dark brown sugar, spices, peppers, and simmered vegetables. (Small-160 calories, Medium-240 calories, Large-320 calories, Quart-640 calories) Ingredients: Water, crushed tomatoes, mixed peppers, onions, carrots, celery, yellow lentils, red lentils, green lentils, sherry wine vinegar, jalapeno peppers, chipotle peppers, kosher salt, garlic, cumin powder, dark brown sugar, Spanish paprika, ancho chili powder, oregano, and black pepper.",
-        "price": "6.25"
-      },
-      {
-        "id": "94307",
-        "name": "Turkey, Avocado, and Walnut Pesto Sandwich",
-        "position": 3,
-        "description": "Our irresistible walnut pesto is the star of this hearty turkey sandwich. (Half-445 calories, Whole-885 calories) Ingredients: Smoked turkey, walnut pesto (black pepper, olive oil, parmesan, kosher salt, lemon juice, garlic, butter, and walnuts) lettuce, tomato, avocado, salt, and black pepper.",
-        "price": "18.00"
-      },
-      {
-        "id": "94309",
-        "name": "Mediterranean Bowl",
-        "position": 3,
-        "description": "Taste of the Mediterranean this hearty and healthy bowl is made up of romaine and warm quinoa as a base, loaded with garbanzo beans, cherry tomatoes, cucumbers, olives, roasted red peppers, feta cheese and finished off with our Italian Herb dressing.",
-        "price": "10.95"
-      }
-    ]
-  },
-  {
-    "type": "Restaurant Menu",
-    "id": "121752",
-    "name": "Hunter Delicatessen",
-    "menuItems": [
-      {
-        "id": "94129",
-        "name": "Pasta Salad",
-        "position": 1,
-        "description": "Pasta with broccoli, zucchini, carrots and peppers over mixed greens.",
-        "price": "7.95"
-      },
-      {
-        "id": "94559",
-        "name": "Cubano Panini",
-        "position": 2,
-        "description": "Roasted pork, Finlandia Swiss, Black Forest ham, Peter Luger steak sauce and horseradish sauce on a garlic baguette. Hot, crispy and pressed.",
-        "price": "9.95"
-      },
-      {
-        "id": "94507",
-        "name": "Beef Burger",
-        "position": 3,
-        "description": "",
-        "price": "5.45"
-      },
-      {
-        "id": "91309",
-        "name": "Cheese Steak Hero",
-        "position": 3,
-        "description": "Sirloin, cheese, onions, peppers, lettuce, tomato and mayo.",
-        "price": "9.95"
-      }
-    ]
-  },
-  {
-    "type": "Restaurant Menu",
-    "id": "121731",
-    "name": "Dallas BBQ",
-    "menuItems": [
-      {
-        "id": "94349",
-        "name": "Henny Wings (5)",
-        "position": 1,
-        "description": "Basted in Hennessy Sauce",
-        "price": "15.99"
-      },
-      {
-        "id": "91259",
-        "name": "BBQ Special",
-        "position": 2,
-        "description": "Sirloin Steak, Baby Back Ribs & 1/4 Rotisserie Chicken • Your Choice of Fries, Baked Potato, Yellow Rice or Mini Salad.",
-        "price": "23.99"
-      },
-      {
-        "id": "96505",
-        "name": "Beyond Burger",
-        "position": 3,
-        "description": "Comes with Fries",
-        "price": "15.99"
-      },
-      {
-        "id": "90310",
-        "name": "Caesar Salad w/Salmon",
-        "position": 3,
-        "description": "Topped with Marinated Grilled Salmon",
-        "price": "18.99"
-      }
-    ]
+  "type": "Restaurant Menu",
+  "id": "121721",
+  "name": "Jackson Hole",
+  "menuItems": [
+    {
+      "id": "94298",
+      "name": "Nachos",
+      "position": 1,
+      "description": "Warm corn tortilla chips topped with melted Cheddar and Pepper Jack cheese, chili, olives, sour cream, housemade salsa, housemade avocado salsa and garnished with cilantro.",
+      "price": "16.00"
+    },
+    {
+      "id": "94301",
+      "name": "Buffalo Wings",
+      "position": 2,
+      "description": "Smothered in House made Spicy sauce, carrots and celery sticks with Blue cheese dressing.",
+      "price": "14.50"
+    },
+    {
+      "id": "94304",
+      "name": "The Classic Burger",
+      "position": 3,
+      "description": "Bacon, American Cheese, JHB Sauce, Crispy Shoestring Onions Diced Pickle served with lettuce & tomato",
+      "price": "18.00"
+    },
+    {
+      "id": "94305",
+      "name": "Jackson Bison Burger",
+      "position": 3,
+      "description": "Pickled Cabbage, banana peppers, marmalade onion, pepper jack cheese, lettuce and tomato",
+      "price": "20.00"
+    }
+  ]
   }
 ]

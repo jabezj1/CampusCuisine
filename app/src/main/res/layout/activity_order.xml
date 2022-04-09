@@ -17,15 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivRestaurantPic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRestaurantName"
-        tools:srcCompat="@tools:sample/avatars" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMenuItems"
@@ -34,7 +26,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivRestaurantPic" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRestaurantName" />
+
 
 
 

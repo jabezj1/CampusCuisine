@@ -19,7 +19,7 @@ class Menu : AppCompatActivity() { // added : AppCompatActivity(), removed () fr
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_order)
+        setContentView(R.layout.activity_order)
         rvMenuItems = findViewById(R.id.rvMenuItems)
 
         val menuItemAdapter = MenuItemAdapter(this, menuItems)

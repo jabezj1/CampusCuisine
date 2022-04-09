@@ -3,16 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Fatin Iftekhar/OneDrive/Documents/Coding/Android/CampusCuisine/app/src/main/res/layout/activity_intro.xml" value="0.1" />
-        <entry key="..\:/Users/Fatin Iftekhar/OneDrive/Documents/Coding/Android/CampusCuisine/app/src/main/res/layout/fragment_order.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Fatin Iftekhar/OneDrive/Documents/Coding/Android/CampusCuisine/app/src/main/res/layout/fragment_place_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Fatin Iftekhar/OneDrive/Documents/Coding/Android/CampusCuisine/app/src/main/res/layout/menu_item.xml" value="0.264" />
         <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/activity_intro.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/activity_main.xml" value="0.35858585858585856" />
+        <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/activity_order.xml" value="0.225" />
+        <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/card_view.xml" value="0.2105978260869565" />
         <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/fragment_checkout.xml" value="0.21331521739130435" />
         <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/fragment_maps.xml" value="0.25" />
         <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/fragment_order.xml" value="0.22" />
         <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/fragment_place_details.xml" value="0.1" />
+        <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/fragment_profile.xml" value="0.1398176291793313" />
+        <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/layout/menu_item.xml" value="0.14166666666666666" />
         <entry key="..\:/Users/wilfr/StudioProjects/CampusCuisine/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.1897644927536232" />
