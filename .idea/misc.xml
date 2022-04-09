@@ -17,6 +17,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_bread_maker.xml" value="0.1897644927536232" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14184397163120568" />
       </map>
     </option>
   </component>

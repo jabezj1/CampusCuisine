@@ -7,10 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import com.example.campuscuisine.databinding.ActivityMainBinding
 import com.parse.ParseObject
 import com.parse.ParseQuery
 import com.parse.ParseUser
@@ -21,6 +19,9 @@ class ProfileFragment : Fragment() {
     lateinit var FavoritesButton: ImageButton
     lateinit var BreadMakerButton: ImageButton
     lateinit var UserId: TextView
+
+
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,21 +36,24 @@ class ProfileFragment : Fragment() {
         UserId = view.findViewById(R.id.tvUser)
         BreadMakerButton = view.findViewById(R.id.btnBreadMaker)
 
+
+
+
         val getUser = ParseUser.getCurrentUser().get("username")
         UserId.text = getUser.toString()
 
-        LogoutButton.setOnClickListener{
+        LogoutButton.setOnClickListener {
             ParseUser.logOut()
             val currentUser = ParseUser.getCurrentUser()
-            Log.i(TAG,"user logged out")
+            Log.i(TAG, "user logged out")
             val intent = Intent(context, IntroActivity::class.java)
             startActivity(intent)
         }
 
         Log.i(TAG, ParseUser.getCurrentUser().get("Breadmaker").toString())
 
-        BreadMakerButton.setOnClickListener{
-          //updateBreadmaker()
+        BreadMakerButton.setOnClickListener {
+            //updateBreadmaker()
             val user = ParseUser.getCurrentUser()
             if (ParseUser.getCurrentUser().get("Breadmaker") == false) {
                 user.put("Breadmaker", true)
@@ -65,7 +69,7 @@ class ProfileFragment : Fragment() {
                         Log.i(TAG, "cannot make breadmaker")
                     }
                 }
-            }else{
+            } else {
                 user.put("Breadmaker", false)
                 user.saveInBackground { e ->
                     if (e == null) {
@@ -82,9 +86,9 @@ class ProfileFragment : Fragment() {
         }
 
 
+
+
     }
-
-
 
     companion object {
         const val TAG = "ProfileFragment"

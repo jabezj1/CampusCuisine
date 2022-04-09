@@ -89,14 +89,14 @@ class PlaceDetailsFragment : Fragment() {
     private fun getRestaurantPhoto(photo_reference: String, photo_width: Int): String {
 
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/photo")
-        restaurantUrl.append("?maxwidth=$photo_width&photoreference=$photo_reference&key=")
+        restaurantUrl.append("?maxwidth=$photo_width&photoreference=$photo_reference&key=AIzaSyCCvUQH5E9yM-wcB21I2K0RTsAcdQSfW-o")
 
         return restaurantUrl.toString()
     }
 
     private fun getPlaceDetailUrl(place_id: String): String {
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/details/json")
-        restaurantUrl.append("?place_id=$place_id&key=")
+        restaurantUrl.append("?place_id=$place_id&key=AIzaSyCCvUQH5E9yM-wcB21I2K0RTsAcdQSfW-o")
         return restaurantUrl.toString()
 
     }
