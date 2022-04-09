@@ -52,7 +52,7 @@ class PlaceDetailsFragment : Fragment() {
 //            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, MapsFragment()).commit()
 //            //fragmentManager.beginTransaction().remove(this).commit()
 //        }
-
+//
 //        orderButton.setOnClickListener{
 //            val fragmentManager: FragmentManager = childFragmentManager
 //            fragmentManager.popBackStackImmediate()

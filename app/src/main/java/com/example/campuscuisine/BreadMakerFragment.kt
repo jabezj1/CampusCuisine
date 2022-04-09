@@ -37,10 +37,10 @@ class BreadMakerFragment : Fragment() {
         // This loop will create 20 Views containing
         // the image with the count of view
 
-            data.add(BmItemsViewModel("Nachos Q:1", "Order For: " + "Joe"))
+        data.add(BmItemsViewModel("Buffalo Wings Q:2 \n Coke Can Q:1", "Order For: " + "Joe"))
 
         data.add(BmItemsViewModel(
-                "Buffalo Wings Q:2", "Order For: " + "Bob"))
+                "Nachos Q:2", "Order For: " + "Bob"))
 
         data.add(BmItemsViewModel("The Classic Burger Q:1", "Order For: " + "Job"))
 
