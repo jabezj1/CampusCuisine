@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.view.isGone
+import androidx.fragment.app.FragmentManager
 import com.example.campuscuisine.MapsPlacesAPI.Common
 import com.example.campuscuisine.MapsPlacesAPI.PlaceDetail
 import com.example.campuscuisine.MapsPlacesAPI.IGoogleAPIService
@@ -47,18 +49,36 @@ class PlaceDetailsFragment : Fragment() {
         closeWindow = view.findViewById(R.id.return_to_map)
 
 
-//        closeWindow.setOnClickListener{
-//            val fragmentManager: FragmentManager = childFragmentManager
-//            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, MapsFragment()).commit()
-//            //fragmentManager.beginTransaction().remove(this).commit()
-//        }
+        closeWindow.setOnClickListener{
+            val fragmentManager: FragmentManager = childFragmentManager
 
-//        orderButton.setOnClickListener{
-//            val fragmentManager: FragmentManager = childFragmentManager
-//            fragmentManager.popBackStackImmediate()
-//            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, OrderFragment())
-//
-//        }
+            closeWindow.visibility = View.GONE
+            orderButton.visibility = View.GONE
+
+            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, MapsFragment()).commit()
+            //fragmentManager.beginTransaction().remove(this).commit()
+
+            // "X" button functionality, closes restaurant view to see other places
+            // closeWindow.Gone // NOT WORKING
+
+
+        }
+
+        orderButton.setOnClickListener{
+            val fragmentManager: FragmentManager = childFragmentManager
+
+            closeWindow.visibility = View.GONE
+            orderButton.visibility = View.GONE
+            restaurantImage.visibility = View.GONE
+            restaurantName.visibility = View.GONE
+
+            //fragmentManager.popBackStackImmediate()
+            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, OrderFragment())
+
+            // make invisible when clicked
+            //orderButton.isGone
+
+        }
 
         if (Common.selectedRestaurant!!.photos != null && Common.selectedRestaurant!!.photos!!.isNotEmpty())
             Picasso.with(context)
@@ -89,14 +109,14 @@ class PlaceDetailsFragment : Fragment() {
     private fun getRestaurantPhoto(photo_reference: String, photo_width: Int): String {
 
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/photo")
-        restaurantUrl.append("?maxwidth=$photo_width&photoreference=$photo_reference&key=")
+        restaurantUrl.append("?maxwidth=$photo_width&photoreference=$photo_reference&key=AIzaSyCCvUQH5E9yM-wcB21I2K0RTsAcdQSfW-o")
 
         return restaurantUrl.toString()
     }
 
     private fun getPlaceDetailUrl(place_id: String): String {
         val restaurantUrl = StringBuilder("https://maps.googleapis.com/maps/api/place/details/json")
-        restaurantUrl.append("?place_id=$place_id&key=")
+        restaurantUrl.append("?place_id=$place_id&key=AIzaSyCCvUQH5E9yM-wcB21I2K0RTsAcdQSfW-o")
         return restaurantUrl.toString()
 
     }
