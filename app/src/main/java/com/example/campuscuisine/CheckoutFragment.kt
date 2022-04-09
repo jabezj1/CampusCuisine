@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -44,6 +46,10 @@ class CheckoutFragment : Fragment() {
         // Setting the Adapter with the recyclerview
         if (recyclerview != null) {
             recyclerview.adapter = adapter
+        }
+
+        view.findViewById<Button>(R.id.button).setOnClickListener {
+            Toast.makeText(context,"Order Has Been Made! \nStill want to head to class?", Toast.LENGTH_LONG). show()
         }
     }
 }

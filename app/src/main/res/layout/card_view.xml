@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="85dp"
     android:layout_margin="10dp"
-    app:cardElevation="6dp">
+    app:cardElevation="6dp"
+    android:background="#f8b30d">
 
     <LinearLayout
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:background="#f8b30d">
 
-<!--        <ImageView-->
-<!--            android:id="@+id/imageview"-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="60dp" />-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imageview"-->
+        <!--            android:layout_width="60dp"-->
+        <!--            android:layout_height="60dp" />-->
 
         <TextView
             android:id="@+id/textView"
@@ -26,6 +28,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="15dp"
             android:text="Item"
+            android:textColor="#004aad"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -38,6 +41,7 @@
             android:layout_marginLeft="15dp"
             android:paddingLeft="120dp"
             android:text="Price"
+            android:textColor="#004aad"
             android:textAlignment="textEnd"
             android:textSize="20sp"
             android:textStyle="bold" />
