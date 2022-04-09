@@ -41,7 +41,7 @@ class ProfileFragment : Fragment() {
         LogoutButton.setOnClickListener{
             ParseUser.logOut()
             val currentUser = ParseUser.getCurrentUser()
-            Log.i(TAG,"User logged out")
+            Log.i(TAG,"user logged out")
             val intent = Intent(context, IntroActivity::class.java)
             startActivity(intent)
         }
