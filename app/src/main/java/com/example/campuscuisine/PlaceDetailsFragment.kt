@@ -62,7 +62,7 @@ class PlaceDetailsFragment : Fragment() {
             orderButton.visibility = View.GONE
             restaurantImage.visibility = View.GONE
             restaurantName.visibility = View.GONE
-            val intent = Intent(context, orderActivity::class.java)
+            val intent = Intent(context, OrderFragment::class.java)
             startActivity(intent)
 
         }
