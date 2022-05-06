@@ -36,9 +36,11 @@ class CheckoutFragment : Fragment() {
 
         // This loop will create 20 Views containing
         // the image with the count of view
-        for (i in 1..20) {
-            data.add(ItemsViewModel("$"+i, "Item " + i))
-        }
+        data.add(ItemsViewModel(
+            "$4.00 x 2", "Buffalo Wings Q:2"))
+        data.add(ItemsViewModel(
+            "$1.50 x 1", "Coke Can Q:1"))
+
 
         // This will pass the ArrayList to our Adapter
         val adapter = CustomAdapter(data)

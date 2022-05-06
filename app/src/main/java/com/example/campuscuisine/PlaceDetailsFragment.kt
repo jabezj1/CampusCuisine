@@ -1,11 +1,13 @@
 package com.example.campuscuisine
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.fragment.app.FragmentManager
 import com.example.campuscuisine.MapsPlacesAPI.Common
 import com.example.campuscuisine.MapsPlacesAPI.PlaceDetail
 import com.example.campuscuisine.MapsPlacesAPI.IGoogleAPIService
@@ -47,18 +49,23 @@ class PlaceDetailsFragment : Fragment() {
         closeWindow = view.findViewById(R.id.return_to_map)
 
 
-//        closeWindow.setOnClickListener{
-//            val fragmentManager: FragmentManager = childFragmentManager
-//            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, MapsFragment()).commit()
-//            //fragmentManager.beginTransaction().remove(this).commit()
-//        }
+        closeWindow.setOnClickListener{
+            closeWindow.visibility = View.GONE
+            orderButton.visibility = View.GONE
+            val fragmentManager: FragmentManager = childFragmentManager
+            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, MapsFragment()).commit()
+            //fragmentManager.beginTransaction().remove(this).commit()
+        }
 
-//        orderButton.setOnClickListener{
-//            val fragmentManager: FragmentManager = childFragmentManager
-//            fragmentManager.popBackStackImmediate()
-//            fragmentManager.beginTransaction().replace(R.id.fragment_place_details, OrderFragment())
-//
-//        }
+        orderButton.setOnClickListener{
+            closeWindow.visibility = View.GONE
+            orderButton.visibility = View.GONE
+            restaurantImage.visibility = View.GONE
+            restaurantName.visibility = View.GONE
+            val intent = Intent(context, orderActivity::class.java)
+            startActivity(intent)
+
+        }
 
         if (Common.selectedRestaurant!!.photos != null && Common.selectedRestaurant!!.photos!!.isNotEmpty())
             Picasso.with(context)

@@ -21,11 +21,34 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="440dp"
+        android:layout_height="321dp"
         android:layout_marginTop="20dp"
         tools:itemCount="5"
         tools:listitem="@layout/card_view" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Delivery Location"
+        android:textColorHint="#004aad"
+        android:textColor="#004aad"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tax: No Tax"
+        android:textSize="20dp"
+        android:textColor="#004aad"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+
+
+        />
     <TextView
         android:layout_marginTop="30dp"
         android:id="@+id/textView3"
@@ -44,22 +67,23 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="$$$$$$$"
+        android:text="$9.50"
         android:textSize="20dp"
         android:textColor="#004aad"
         android:textStyle="bold"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
 
 
         />
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Checkout"
         android:layout_margin="20dp"
-        android:backgroundTint="#004aad"/>
+        android:backgroundTint="#004aad"
+        android:text="Checkout" />
 
     <!--        tools:listitem="@layout/card_view_design" -->
 

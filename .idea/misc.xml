@@ -17,12 +17,14 @@
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2908584594726563" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1897644927536232" />
+        <entry key="app/src/main/res/layout/activity_order.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/bm_card_view.xml" value="0.30948944091796876" />
         <entry key="app/src/main/res/layout/card_view.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/fragment_bread_maker.xml" value="0.23180999755859377" />
         <entry key="app/src/main/res/layout/fragment_checkout.xml" value="0.1897644927536232" />
+        <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.1958295557570263" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14184397163120568" />
       </map>
     </option>
